@@ -11,5 +11,7 @@ public class Main {
         studentController.addStudents();
         studentController.sortByStudentScore();
         studentController.showListStudent();
+        studentController.sortByStudentScoreAndName();
+        studentController.showTop3Student();
     }
 }

@@ -16,18 +16,29 @@ public class StudentController {
     }
 
     public void addStudents() {
-        studentArrayList.add(new Student("A", 9));
+        studentArrayList.add(new Student("A", 8));
         studentArrayList.add(new Student("B", 10));
-        studentArrayList.add(new Student("C", 8));
+        studentArrayList.add(new Student("C", 9));
+        studentArrayList.add(new Student("D", 8));
     }
 
     public void sortByStudentScore() {
         Collections.sort(studentArrayList);
     }
 
+    public void sortByStudentScoreAndName(){
+        Collections.sort(studentArrayList,Student.studentScoreAndNameComparator);
+    }
+
     public void showListStudent() {
         System.out.println("List student:");
         for (Student s : studentArrayList)
             System.out.println(s.toString());
+    }
+
+    public void showTop3Student(){
+        System.out.println("Top 3 student:");
+        for(int i = 0; i < 3; i++)
+            System.out.println(studentArrayList.get(i).toString());
     }
 }
